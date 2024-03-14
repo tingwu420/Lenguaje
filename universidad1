@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+1.	Nombre de la Universidad.
+/universidad/nombre
+
+2.	Pais de la Universidad.
+//pais
+
+3.	Nombres de las Carreras.
+/universidad/carreras/carrera/nombre
+//carrera/nombre
+
+4.	Años de plan de estudio de las carreras.
+/universidad/carreras/carrera/plan
+//carrera/plan
+
+5.	Nombres de todos los alumnos.
+/universidad/alumnos/alumno/nombre
+//alumno/nombre 
+
+6.	Identificadores de todas las carreras.
+//carreras/carrera/@id
+
+7.	Datos de la carrera cuyo id es c01.
+//carrera/[@ id='c01'
+
+8.	Centro en que se estudia de la carrera cuyo id es c02.
+//carrera/centro/[@id='c02']
+
+9.	Nombre de las carreras que tengan subdirector.
+//subdirector/../nombre
+//carrera[subdiretor]/nombre
+
+10.	Nombre de los alumnos que estén haciendo proyecto.
+//proyecto/../../nombre
+//alumno[estudio/proyecto]/nombre
+//alumno/estudio[proyecto]/../nombre
+
+11.	Códigos de las carreras en las que hay algún alumno matriculado.
+//estudios/carrera/@codigo
+
+11a.	Códigos de las carreras en las que hay algún alumno matriculado en alguna asignatura.
+//asignatura/../../carrera/@codigo
+//estudios[asignaturas]/carrera/@codigo
+
+12.	Apellidos y Nombre de los alumnos con beca.
+//alumno[@beca]/nombre  | //alumno[@beca]/apellido1   | //alumno[@beca]/apellido2
+
+13.	Nombre de las asignaturas de la titulación c04.
+//asignaturas/asignatura[@titulacion='c04']/nombre
+
+14.	Nombre de las asignaturas de segundo trimestre
+//asignaura[trimestre='2']/nombre
+
+15.	Nombre de las asignaturas que no tienen 4 créditos teóricos.
+//asignatura[not(creditos_teoricos='4')]/nombre
+
+16.	Código de la carrera que estudia el último alumno.
+//alumno[last()]/estudios/carrera/@codigo
+
+17.	Código de las asignaturas que estudian mujeres.
+//alumno[sexo='Mujer']/estudios/asignaturas/asignatura/@codigo
+
+18.	Nombre de los alumnos que matriculados en la asignatura a02.
+//alumno[estudios/asignaturas/asignatura/@codigo='a02']/nombre
+
+19.	Códigos de las carreras que estudian los alumnos matriculados en alguna asignatura.
+//alumno/estudios/carrera/@codigo
+
+20.	Apellidos de todos los hombres.
+//alumno[sexo='Hombre']/apellido1| //alumno[sexo='Hombre']/apellido2
+
+21.	Nombre de la carrera que estudia Víctor Manuel.
+//carrera[@id=//alumno[nombre='Víctor Manuel']/estudios/carrera/@codigo]/nombre
+
+22.	Nombre de las asignaturas que estudia Luisa.
+
+
+23.	Primer apellido de los alumnos matriculados en Ingeniería del Software.
+
